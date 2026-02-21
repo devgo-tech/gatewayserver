@@ -4,7 +4,7 @@ spring:
   application:
     name: gateway-server
   config:
-    import: configserver:http://config-server:8888
+    import: configserver:http://configserver:8888
   cloud:
     gateway:
       discovery:
@@ -33,7 +33,7 @@ management:
       probability: 1.0 # Set the sampling probability (1.0 = 100%)
   otlp:
     tracing:
-      endpoint: http://zipkin-server:9411/api/v2/spans
+      endpoint: http://zipkin:9411/api/v2/spans
   endpoints:
     web:
       exposure:
